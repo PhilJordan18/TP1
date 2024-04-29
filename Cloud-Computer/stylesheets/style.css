@@ -1,0 +1,221 @@
+:root {
+    --color-1: hsl(158 100% 23%);
+    --color-2: hsl(144, 68%, 84%);
+    --color-3: hsl(21, 75%, 65%);
+    --color-4: hsl(190, 43%, 35%);
+    --color-5: hsl(19, 66%, 80%);
+    --color-6: hsl(164, 31%, 17%);
+    --color-7: hsl(0, 0%, 0%);
+    --color-8: hsla(0, 0%, 0%, 0.256);
+    --color-9: hsl(255, 100%, 100%);
+    --color-10: #0062E6;
+    --color-11: #007bff;
+    --color-12: #666777;
+}
+
+/* second thème */
+.second-theme {
+    --color-7: red;
+    --color-10: green;
+    --color-11: rgba(255, 255, 0, 0.286);
+}
+
+body {
+    background-color: var(--color-7);
+    color: var(--color-9) !important;
+}
+
+section.schedule {
+    background-color: var(--color-9) !important;
+    color: var(--color-7);
+}
+a {
+    text-decoration: none;
+    color: var(--color-9);
+}
+
+/* CSS NAVBAR */
+.navbar {
+    background-color: var(--color-9);
+    height: 80px;
+    margin: 20px;
+    border-radius: 16px;
+    padding: 0.5rem;
+}
+
+.navbar-brand {
+    font-weight: 500;
+    color: var(--color-10);
+    font-size: 24px;
+    transition: 0.3s color;
+}
+
+.theme-button {
+    background-color: var(--color-10) !important;
+    color: var(--color-9) !important;
+    font-size: 1rem !important;
+    padding: 8px 20px !important;
+    border-radius: 50px !important;
+    text-decoration: none !important;
+    transition: 0.3s background-color !important;
+    margin-right: 1rem;
+}
+
+.login-button, .bouton-dyn{
+    background-color: var(--color-10);
+    color: var(--color-9);
+    font-size: 1rem;
+    padding: 8px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: 0.3s background-color;
+}
+
+.login-button:hover, .theme-button:hover {
+    background-color: var(--color-11);
+}
+
+.navbar-toggler {
+    border: none;
+    font-size: 1.25rem;
+}
+
+.navbar-toggler:focus,
+.btn-close:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+.nav-link {
+    font-weight: 500;
+    color: var(--color-12);
+    position: relative;
+}
+
+.nav-link:hover,
+.nav-link:active {
+    color: var(--color-7);
+}
+
+@media(min-width: 992px) {
+    .nav-link::before {
+        position: absolute;
+        content: "";
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50);
+        width: 0;
+        height: 2px;
+        background-color: var(--color-10);
+        visibility: hidden;
+        transition: 0.3s ease-in-out;
+    }
+
+    .nav-link:hover::before,
+    .nav-link:active::before {
+        width: 100%;
+        visibility: visible;
+    }
+}
+
+/* CSS POUR LA BANNIÈRE */
+
+.hero-section {
+    background: url(../images/cloud-banner.jpg) no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 70vh;
+}
+
+.hero-section::before {
+    background-color: var(--color-8);
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.hero-section h1 {
+    font-size: 1.5rem;
+}
+
+.hero-section .container {
+    height: 100vh;
+    z-index: 1;
+    position: relative;
+}
+
+/* CSS Pour le Pricing */
+
+section.pricing {
+    background: var(--color-11);
+    background: linear-gradient(to right, var(--color-10), #33AEFF);
+}
+
+
+.pricing .featured {
+    transform: scale(1.05);
+    z-index: 1;
+    box-shadow: 0 0.5rem 1.5rem 0 rgba(0, 0, 0, 0.15);
+}
+
+.pricing .card {
+    border: none;
+    border-radius: 1rem;
+    transition: all 0.2s;
+    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+}
+
+.pricing hr {
+    margin: 1.5rem 0;
+}
+
+.pricing .card-title {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+    letter-spacing: .1rem;
+    font-weight: bold;
+}
+
+.pricing .card-price {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.pricing .card-price .period {
+    font-size: 0.8rem;
+}
+
+.pricing ul li {
+    margin-bottom: 1rem;
+}
+
+.pricing .text-muted {
+    opacity: 0.7;
+}
+
+.pricing .btn {
+    font-size: 80%;
+    border-radius: 5rem;
+    letter-spacing: .1rem;
+    font-weight: bold;
+    padding: 1rem;
+    opacity: 0.7;
+    transition: all 0.2s;
+}
+
+
+
+@media (min-width: 992px) {
+    .pricing .card:hover {
+        margin-top: -.25rem;
+        margin-bottom: .25rem;
+        box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.3);
+    }
+
+    .pricing .card:hover .btn {
+        opacity: 1;
+    }
+}

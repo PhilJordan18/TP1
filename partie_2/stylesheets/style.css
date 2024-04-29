@@ -1,0 +1,58 @@
+#logo svg{
+    width: 51px;
+    height: 58px;
+}
+
+.d-flex .btn{
+    margin-left: 1rem ;
+}
+
+:root{
+    --color-1: hsl(158 100% 23%);
+    --color-2: hsl(144, 68%, 84%);
+    --color-3: hsl(21, 75%, 65%);
+    --color-4: hsl(190, 43%, 35%);
+    --color-5: hsl(19, 66%, 80%);
+    --color-6: hsl(164, 31%, 17%);
+    --color-7: hsl(0, 0%, 0%);
+    --color-8: hsla(0, 0%, 0%, 0.256);
+}
+
+.nav-link:hover, .text-dark:hover {
+    color: hsl(158, 100%, 23%) !important;
+}
+
+.custom-background-1{
+    background-color: var(--color-2);
+}
+
+.custom-background-2{
+    background-color: var(--color-3);
+    color: var(--color-6);
+}
+
+
+.custom-background-3{
+    background-color: var(--color-4);
+    color: #fff;
+}
+
+.custom-background-4{
+    background-color: var(--color-5);
+    color: var(--color-6);
+}
+
+.custom-background{
+    background-color: var(--color-6);
+    color: #fff;
+}
+
+@media(width <= 48.75rem){
+    ul .fit{
+        display: none;
+    }
+}
+
+.inactive:hover{ 
+    color: #000 !important;
+}
